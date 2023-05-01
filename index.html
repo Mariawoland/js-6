@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS 6</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+
+        function kenti() {
+
+            var ricxvebi = "";
+
+            for (ricxvi = 1; ricxvi <= 100; ricxvi++) {
+
+                if (ricxvi % 2 == 1) {
+                    ricxvebi += '<span style=" color: transparent">_</span>' + ricxvi + '<span style=" color: transparent">_</span>';
+                }
+            }
+            //print the values
+            document.getElementById("shedegi").innerHTML = ricxvebi;
+        }
+
+    </script>
+
+    <style>
+        body {
+            font-size: 23px;
+            font-family: calibri;
+            color: white;
+            font-weight: 600;
+            background-color: rgba(122, 6, 25, 0.884);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 95vh;
+            gap: 20px;
+            text-align: center;
+        }
+
+        #gilaki {
+            width: 250px;
+            height: 80px;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            background-color: rgb(92, 26, 36);
+            border: 3px solid white;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        #shedegi {
+            letter-spacing: 0.2rem;
+            font-size: 24px;
+            white-space: initial;
+            word-break: break-all;
+            line-height: 160%;
+            margin: 0 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                height: auto;
+            }
+
+            #shedegi {
+                display: block;
+                width: 100%;
+                padding-left: 40px;
+                box-sizing: border-box;
+                margin: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>დააჭირე რომ ნახო კენტი რიცხვები 1-დან 100-მდე.</p>
+    <input type="button" id="gilaki" onclick="kenti()" value="დააჭირე!" />
+    <span id="shedegi"></span>
+
+</body>
+
+</html>
